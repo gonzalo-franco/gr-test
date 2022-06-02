@@ -1,0 +1,19 @@
+<div class="form">
+
+    <!-- Ball number selector -->
+    <form #radioBtnForm>
+        <legend class="form__title">Numbers
+        </legend>
+        <fieldset class="form__options" #radiobtc>
+            <p class="form__answer" *ngFor="let number of numbers">
+                <input type="radio" name="match" id="match_{{number}}" value="{{number}}">
+                <label for="match_{{number}}">
+                    <svg height="80" width="80">
+                        <circle cx="40" cy="40" r="40" fill="red" class="ball" id="match_{{number}}" />
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{number}}</text>
+                    </svg>
+                </label>
+            </p>
+        </fieldset>
+    </form>
+</div>

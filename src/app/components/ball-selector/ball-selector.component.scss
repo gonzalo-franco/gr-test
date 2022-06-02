@@ -1,0 +1,109 @@
+
+
+
+
+
+/* Color palette */
+
+$font-color: #FAFAFA;
+$ball-color: #9CC0E7;
+
+
+
+/* Form Styles */
+
+.form {
+	max-width: 50vw;;
+	margin: 2rem auto;
+}
+
+.form__header {
+	margin-bottom: 40px;
+	border-bottom: 1px dashed rgba($font-color,.15);
+}
+
+.form__title {
+	font-size: 25px;
+	margin: 10px 0;
+}
+
+
+.form__options {
+    
+	border: none;
+	padding: 0;
+}
+
+
+.form__answer {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 20px 1% 20px 0;
+	vertical-align: top;
+	font-size: 22px;
+	text-align: center; 
+}
+
+label {
+	box-sizing: border-box;
+	display: block;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	opacity: .5;
+	transition: all .5s ease-in-out;
+	
+}
+
+
+
+
+/* Hide radio button */
+
+input[type="radio"] {
+	opacity: 0;
+	width: 0;
+  height: 0;
+}
+
+input[type="radio"]:active ~ label {
+  opacity: 1;
+}
+
+input[type="radio"]:checked ~ label {
+  opacity: 1;
+	border: 1px solid $font-color;
+}
+
+/* Radio button colors*/
+
+#match_0{
+    fill:#00ba8b
+}
+#match_1{
+    fill:#989898
+}
+#match_2{
+    fill:#f2baff
+}
+#match_3{
+    fill:#6a797e
+}
+#match_4{
+    fill:#a9927e
+}
+#match_5{
+    fill:#93a27b
+}
+#match_6{
+    fill:#fde2e2
+}
+#match_7{
+    fill:#ff7474
+}
+#match_8{
+    fill:#ffd2f8
+}
+#match_9{
+    fill:#e0ff82
+}

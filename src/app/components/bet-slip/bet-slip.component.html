@@ -1,0 +1,37 @@
+<form [formGroup]="betForm" #betform class="bet__form" (ngSubmit)="onSubmit()">
+    <!-- Binding betForm to the form in the template -->
+    <div class="results__array">
+        <p class="form__answer" *ngFor="let number of resultArray">
+            <label for="match_{{number}}">
+                <svg height="50" width="50">
+                    <circle cx="25" cy="25" r="20" class="ball" id="match_{{number}}" />
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{number}}</text>
+                </svg>
+                <!-- {{number}} -->
+            </label>
+        </p>
+    </div>
+    <div>
+        <a for="selectedBall">Selected ball: {{betForm.controls['selectedBall'].value}} </a>
+        <div *ngIf="betForm.controls['bet'].hasError('required')">
+            Required value
+        </div>
+    </div>
+    <div>
+        <a for="bet">Bet </a>
+        <input type='number' id="bet" class="bet__input" formControlName="bet">
+        <div *ngIf="betForm.controls['bet'].hasError('min')">
+            Minimum required number is 15.
+        </div>
+        <div *ngIf="betForm.controls['bet'].hasError('max')">
+            The maximun number is {{totalscore}}
+        </div>
+    </div>
+    <div>
+        <a>Total: {{totalscore}} </a>
+
+    </div>
+    <button type="submit" #placeBetBtn id="place-bet" class="place__bet" [disabled]="betForm.invalid"> Send</button>
+
+
+</form>

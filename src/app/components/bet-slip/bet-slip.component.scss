@@ -1,0 +1,83 @@
+$background-color: #008CBA;
+$background-color-disabled: #9CC0E7;
+
+.bet__form {
+	max-width: 30vw;;
+	margin: 2rem auto;
+    display:flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 1rem;
+}
+.place__bet{
+    max-width:15rem;
+    background-color: $background-color; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+.place__bet:disabled{
+    max-width:15rem;
+    background-color: $background-color-disabled;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+.bet__input {
+    max-width:15rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+a{
+    font-size: 1.5rem;
+
+}
+.results__array{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    min-height: 6rem;
+}
+
+
+
+//ball colors
+#match_0{
+    fill:#00ba8b
+}
+#match_1{
+    fill:#989898
+}
+#match_2{
+    fill:#f2baff
+}
+#match_3{
+    fill:#6a797e
+}
+#match_4{
+    fill:#a9927e
+}
+#match_5{
+    fill:#93a27b
+}
+#match_6{
+    fill:#fde2e2
+}
+#match_7{
+    fill:#ff7474
+}
+#match_8{
+    fill:#ffd2f8
+}
+#match_9{
+    fill:#e0ff82
+}
