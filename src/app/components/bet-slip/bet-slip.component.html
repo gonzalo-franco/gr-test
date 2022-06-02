@@ -31,7 +31,15 @@
         <a>Total: {{totalscore}} </a>
 
     </div>
+
     <button type="submit" #placeBetBtn id="place-bet" class="place__bet" [disabled]="betForm.invalid"> Send</button>
 
+    <div *ngIf="winner === true">
+        <a>Has ganado {{winnerscore}}! </a>
 
+    </div>
+    <div *ngIf="winner === false">
+        <a>Has perdido! </a>
+
+    </div>
 </form>

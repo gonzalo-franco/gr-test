@@ -14,6 +14,8 @@ export class BetSlipComponent implements OnDestroy {
   messages: number[] = [];
   resultArray: number[] = [];
   result: number = 0;
+  winner: boolean | null = null;
+  winnerscore: number = 0;
   totalscore: number = 1000;
   betForm = new FormGroup({});
   constructor(
@@ -38,6 +40,7 @@ export class BetSlipComponent implements OnDestroy {
   }
 
   onSubmit() {
+    this.winner = false;
     //generate a random number a check it with the selected one
     this.result = this.getRandomInt(9);
     this.resultArray.unshift(this.result);
@@ -46,8 +49,9 @@ export class BetSlipComponent implements OnDestroy {
     }
 
     if (this.betForm.controls["selectedBall"].value == this.result) {
-      this.totalscore =
-        this.totalscore + this.betForm.controls["bet"].value * 1.5;
+      this.winnerscore = this.betForm.controls["bet"].value * 1.5;
+      this.totalscore = this.totalscore + this.winnerscore;
+      this.winner = true;
     } else {
       this.totalscore = this.totalscore - this.betForm.controls["bet"].value;
     }
